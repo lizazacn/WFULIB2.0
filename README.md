@@ -3,13 +3,32 @@ WFU图书馆座位预约辅助系统
 
 # 简介：
     该脚本使用纯python编写，使用多线程技术，提高成功率（经过多次试验得到当前合适的线程数为5，建议不要修改线程数量）
-    脚本具有启动邮件通知和预约成功通知，只需正确设置相关数据即可
-    
-# 程序启动方式
+    脚本具有启动通知和预约成功通知(邮件方式)，只需正确设置相关数据即可
+# 使用条件
+    1、Windows/Linux电脑（最优：24小时开机， 最低：预约时间段开机）
+    2、安装Python运行环境及必要的库如：request、PIL
+      ubuntu安装：
+          sudo apt-get install python3 -y
+          sudo pip3 install requests pillow
+      Centos安装:
+          sudo yum install python3 -y
+          sudo pip3 install requests pillow
+      Windows安装方法自行百度
+     3、了解Google的的开发模式
+# 启动方法
     python seat_order.py [用户名， 密码， 编号， 邮箱， 截止时间]
-    详情见：
+    详情见示例：
         Linux:      Start.sh
         Windows:    Start.bat
+# 设置定时任务
+    Centos：
+        sudo yum install crond
+        vim /etc/crontab
+        根据示例添加对应信息
+        systemctl start crond  #启动crond
+        systemctl enabel crond #设置crond开机自启动
+    Windows百度有很多，请自行百度
+    注意：定时启动建议使用绝对路径
 # 联系方式
     email: lizaza@lizaza.cn
 
