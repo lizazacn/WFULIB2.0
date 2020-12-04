@@ -34,6 +34,8 @@ WFU图书馆座位预约辅助
         systemctl enabel crond #设置crond开机自启动
     Windows百度有很多，请自行百度
     注意：定时启动建议使用绝对路径
+<img src="https://github.com/lizazacn/WFULIB2.0/blob/main/20201204092306.PNG?raw=true">
+
 # 联系方式
     email: lizaza@lizaza.cn
 
